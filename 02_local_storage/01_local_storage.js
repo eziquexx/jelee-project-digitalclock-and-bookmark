@@ -21,7 +21,7 @@ $loginButton.addEventListener("click", () => {
   localStorage.setItem("id", $idInput.value);
   localStorage.setItem("pwd", $passwordInput.value);
 
-  // localStorage.getItem()을 사용해보기.
+  // getItem 메서드를 사용해 로컬 스토리지에 저장된 값 출력하기.
   // 1.로컬 스토리지에 저장된 id, pwd의 키 값을 localStorage 객체의 getItem 메서드를 사용해 가져와서 각각 myId, myPassword 변수에 담아보자.
   // 2. 콘솔창에 id와 paswword 값을 출력해보자.
   let myId = localStorage.getItem("id");
