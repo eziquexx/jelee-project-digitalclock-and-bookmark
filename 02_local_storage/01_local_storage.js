@@ -21,6 +21,10 @@ $loginButton.addEventListener("click", () => {
   localStorage.setItem("id", $idInput.value);
   localStorage.setItem("pwd", $passwordInput.value);
 
+
+
+  ///////////////////////////////////////////////////////////////////
+
   // getItem 메서드를 사용해 로컬 스토리지에 저장된 값 출력하기.
   // 1.로컬 스토리지에 저장된 id, pwd의 키 값을 localStorage 객체의 getItem 메서드를 사용해 가져와서 각각 myId, myPassword 변수에 담아보자.
   // 2. 콘솔창에 id와 paswword 값을 출력해보자.
@@ -34,6 +38,13 @@ $loginButton.addEventListener("click", () => {
   // 자바스크립트에서 local storage는 텍스트 데이터만 저장할 수 있기 때문이다.
   // 객체 혹은 배열 형태의 데이터를 local storage에 저장하려면 데이터를 문자열로 변환해야한다.
   // 변환은 보통 자바스크립트의 내장 객체인 JSON을 사용한다.
-  let userInfo = { id: $idInput.value, pwd: $passwordInput.value };
-  localStorage.setItem("userInfo", userInfo);
+  // let userInfo = { id: $idInput.value, pwd: $passwordInput.value };
+  // localStorage.setItem("userInfo", userInfo);
+
+  
+
+  ///////////////////////////////////////////////////////////////////
+
+  // JSON.stringfy()를 사용해 데이터를 문자열로 변환한 후 로컬 스토리지에 저장하기
+
 });
