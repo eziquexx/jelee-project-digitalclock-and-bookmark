@@ -10,15 +10,13 @@ const $loginButton = document.getElementById('login-btn');
 $loginButton.addEventListener("click", () => {
   window.alert('로그인 성공');
 
-  console.log('userId: ' + $idInput.value);
-  console.log('password: ' + $passwordInput.value);
-
-  // localStorage 객체와 setItem 메서드를 사용해서 아이디와 비밀번호 값을 로컬 스토리지에 저장.
-  // localStorage.setItem() 작성법
-  // localStorage.setItem(keyName, keyValue)
-  // 아이디와 비밀번호의 keyName은 각각 id와 pwd로 설정한다.
-  // 값은 로컬 스토리지에 저장되었다. 애플리케이션 탭에서 확인.
+  // JSON.stringfy()를 사용해 데이터를 문자열로 변환한 후 로컬 스토리지에 저장하기
   localStorage.setItem("id", $idInput.value);
   localStorage.setItem("pwd", $passwordInput.value);
+  let myId = localStorage.getItem("id");
+  let myPassword = localStorage.getItem("pwd");
+
+  console.log(myId);
+  console.log(myPassword);
 
 });
