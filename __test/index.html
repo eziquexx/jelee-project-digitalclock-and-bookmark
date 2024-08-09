@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #output {
+      font-family: Arial, Helvetica, sans-serif;
+      border: 1px solid black;
+      width: 95%;
+      margin: auto;
+    }
+    #output:focus-visible {
+      outline: 3px solid dodgerblue;
+    }
+  </style>
+  <script>
+    window.addEventListener(
+      "keydown",
+      (event) => {
+        const p = document.createElement("p");
+        p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
+        document.getElementById("output").appendChild(p);
+        window.scrollTo(0, document.body.scrollHeight);
+      },
+      true,
+    );
+  </script>
+</head>
+<body>
+  <p>
+    키보드의 각 키를 눌러 키보드 이벤트에서 키와 코드가 각각 어떤 값으로
+    나타나는지 확인해 보세요.
+  </p>
+  <div id="output" tabindex="0"></div>
+</body>
+</html>
