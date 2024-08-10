@@ -7,7 +7,7 @@ const moveResultPage = () => {
   // window객체의 location.href 속성을 사용하여 페이지를 특정 주소의 웹페이지로 이동시키기. 여기서는 구글 검색 페이지로..
   const windowURL = window.location.href = `https://www.google.com/search?q=${searchWord}`;
 
-  window.open(windowURL,"mozillaTab");
+  window.open(windowURL); // 새 탭으로 오픈하고 싶어서 window객채의 .open 메서드를 써봤지만 안된다.. 팝업 차단됨.
   searchWord = ''; // 검색되고 난 뒤에 빈 값으로 초기화.
 };
 
